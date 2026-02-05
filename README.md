@@ -106,6 +106,6 @@ On va donc demander à ce que le readinessProbe soit sur un initial delay de 5 s
 Pour la liveness ces arguments vont êtres sur 120 et 10 
 Rentrez dans le pod nginx via Kubectl exec –it nginx /bin/bash
 
-Modifiez le fichier default.conf via la commande cat EOF 
+Modifiez le fichier default.conf via la commande cat EOF (ou un vi en installant avec pat-get update et apt-get install vim)
 
 Via la commande /etc/init.d/nginx reload recharger la conf nginx. Sortez de conteneur et regardez ce qui se passe
