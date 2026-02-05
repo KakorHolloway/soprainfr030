@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: curl-deployment
+  labels:
+    app: curl
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: curl
+  template:
+    metadata:
+      labels:
+        app: curl
+    spec:
+      containers:
+      - name: curl
+        resources:
+          limits:
+            cpu: 100m
+        image: ibmcom/curl:4.0.0
+        command: ["sleep", "3600"]
