@@ -46,3 +46,10 @@ Une fois authentifié (attention à ne pas recharger la page même si l'affichag
 Cliquez sur le lien Display Token et copiez dans votre terminal sur VScode la ligne de commande qui à été donné avec oc. 
 
 Pour vérifier que vous êtes authentifiés, lancez la commande ```oc get pod```
+
+## Exercice 1 : Déploiement de votre premier pod 
+
+A partir de la documentation Kubernetes https://kubernetes.io/docs/concepts/workloads/pods/, créez un pod Nginx qui va utiliser l'image :
+harbor.kakor.ovh/public/nginx-rootless
+
+Vérifiez le fonctionnement du conteneur et une fois confirmé, supprimez-le. 
