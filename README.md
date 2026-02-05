@@ -105,3 +105,10 @@ Rentrez dans le pod nginx via Kubectl exec –it nginx /bin/bash
 Modifiez le fichier default.conf via la commande cat EOF(ou via un vi grâce une installation avec apt-get sur le pod)
 Via la commande /etc/init.d/nginx reload recharger la conf nginx. Sortez de conteneur et regardez ce qui se passe
 
+## Exercice 6
+
+Reprenez le deployment de l'exercice d'avant, ajoutez un service et l'ingress associés. 
+
+Créez une configmap qui ira modifier le fichier index.html dans le dossier /urs/share/nginx/html du deployment pour afficher le contenu de votre choix. 
+
+Vérifier en vous connectant à l'ingress depuis votre navigateur que la modification est bien effective. 
