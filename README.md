@@ -53,3 +53,22 @@ A partir de la documentation Kubernetes https://kubernetes.io/docs/concepts/work
 harbor.kakor.ovh/public/nginx-rootless
 
 Vérifiez le fonctionnement du conteneur et une fois confirmé, supprimez-le. 
+
+## Exercice 2
+
+Créez deux pod : 
+
+Un pod avec l'image nginx : harbor.kakor.ovh/public/nginx
+Un pod avec l'image curl (attention vous allez avoir un status crashloopbackoff lié au fait qu'il n'y a pas de processus actif, ajoutez donc un sleep 3600 au démarrage)
+
+Un service nommé "nginx" relié au pod du même nom à travers le label ```test: nginx```
+
+Pour créer le service ClusterIp , appuyez-vous sur la documentation jointe ici : https://kubernetes.io/fr/docs/concepts/services-networking/service/
+
+Testez avec la commande oc exec, de vous connecter sur le pod curl et vérifiez que le service est bien fonctionnel. 
+
+Attention, les conteneurs étant en root, vous devrez ajouter dans la section spec.containers le contenu suivant :
+````
+    securityContext:
+      allowPrivilegeEscalation: true
+````
