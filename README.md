@@ -87,3 +87,11 @@ Attention, nous sommes sous openshift, de fait l'ingress à pour vocation de cr�
 Votre site devra avoir l'adresse dns :
 
 votresite.apps.openshift.kakor.ovh
+
+## Exercice 4
+En vous aidant de la documentation de Kubernetes, créez un deployment qui va créer 2 pod ibmcom/curl:3.6 avec le label app: curl (attention au command)
+De même, faites via un statefulset un pod qui contiendra l’image nginx avec le label app: nginx
+Mettez à jour l’image du deployment avec le tag 4.0.0
+Regardez ce qui se passe
+Mettez à jour l’image avec le tag inexistant 7.4.2
+Regardez ce qui se passe
