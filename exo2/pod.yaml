@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+  labels: 
+    test: toto
+spec:
+  containers:
+  - name: nginx
+    image: harbor.kakor.ovh/public/nginx
+    securityContext:
+      allowPrivilegeEscalation: true
+    ports:
+    - containerPort: 80
