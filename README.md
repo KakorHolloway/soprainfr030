@@ -72,3 +72,18 @@ Attention, les conteneurs étant en root, vous devrez ajouter dans la section sp
     securityContext:
       allowPrivilegeEscalation: true
 ````
+
+## Exercice 3
+
+Le but de cet exercice est d'accéder depuis votre machine au site nginx. 
+
+Pour ce faire gardez les pods et services de l'exercice (sauf le curl)
+
+Créez le service en vous aidant de la documentation suivante :
+https://kubernetes.io/docs/concepts/services-networking/ingress/
+
+Attention, nous sommes sous openshift, de fait l'ingress à pour vocation de créer une route de type Edge. De fait, aidez vous de la documentation suivante pour créer la route de type Edge. https://docs.redhat.com/en/documentation/openshift_container_platform/4.21/html/ingress_and_load_balancing/routes#nw-ingress-edge-route-default-certificate_creating-advanced-routes
+
+Votre site devra avoir l'adresse dns :
+
+votresite.apps.openshift.kakor.ovh
