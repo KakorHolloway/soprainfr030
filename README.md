@@ -97,15 +97,11 @@ Mettez à jour l’image avec le tag inexistant 7.4.2
 Regardez ce qui se passe
 
 ## Exercice 5
-
-Sur le pod liveness-probe précédent ajoutez une nouvelle section readiness et observez le comportement via un watch
-
+Créez un deployment nginx avec l’image harbor.kakor.ovh/public/nginx ajoutez une nouvelle section readiness et observez le comportement via un watch
 Créez un pod nginx qui vérifiera que le port 80 est bien actif
 On va donc demander à ce que le readinessProbe soit sur un initial delay de 5 second et une periodSeconds de 3
-
-Pour la liveness ces arguments vont êtres sur 120 et 10 
+Pour la liveness ces arguments vont être sur 120 et 10 
 Rentrez dans le pod nginx via Kubectl exec –it nginx /bin/bash
-
-Modifiez le fichier default.conf via la commande cat EOF (ou un vi en installant avec pat-get update et apt-get install vim)
-
+Modifiez le fichier default.conf via la commande cat EOF(ou via un vi grâce une installation avec apt-get sur le pod)
 Via la commande /etc/init.d/nginx reload recharger la conf nginx. Sortez de conteneur et regardez ce qui se passe
+
