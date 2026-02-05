@@ -4,7 +4,7 @@ metadata:
   name: nginx
 spec:
   rules:
-  - host: correction.apps.openhfit.kakor.ovh
+  - host: correction.apps.openshfit.kakor.ovh
     http:
       paths:
       - pathType: Prefix
