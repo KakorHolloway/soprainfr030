@@ -26,7 +26,7 @@ En exemple vous pouvez aussi créer le Dockerfile pour l'une de ces applications
 
 - Créez l'image docker de vos composants applicatifs et mettez la à disposition sur harbor.kakor.ovh/ipi/nomgroupe-back (dans l'idéal elle ne devraient s'executer en root)
 
-https://harbor.kakor.ovh (utilisateur)
+https://harbor.kakor.ovh (utilisateur ipi)
 
 - Réfléchissez à l'infrastructure à mettre en place sur Kubernetes à l'aide de l'outil Draw.io (ou du moins avec les symboles officiels de Kube vu en cours) 
 
