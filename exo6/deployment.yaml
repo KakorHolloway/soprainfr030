@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: nginx
+  name: nginx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - image: harbor.kakor.ovh/public/nginx:latest
+        name: nginx
+        securityContext:
+          allowPrivilegeEscalation: true
+        resources: {}
+        readinessProbe:
+          tcpSocket:
+            port: 80
+          initialDelaySeconds: 5
+          periodSeconds: 3
+        livenessProbe:
+          tcpSocket:
+            port: 80
+          initialDelaySeconds: 10
+          periodSeconds: 5
+        volumeMounts:
+        - name: config
+          mountPath: "/usr/share/nginx/html"
+      volumes:
+  # You set volumes at the Pod level, then mount them into containers inside that Pod
+      - name: config
+        configMap:
+      # Provide the name of the ConfigMap you want to mount.
+          name: demo

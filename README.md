@@ -107,7 +107,7 @@ Via la commande /etc/init.d/nginx reload recharger la conf nginx. Sortez de cont
 
 ## Exercice 6
 
-Reprenez le deployment de l'exercice d'avant, ajoutez un service et l'ingress associés. 
+Reprenez le deployment de l'exercice d'avant, ajoutez un service et l'ingress associé. 
 
 Créez une configmap qui ira modifier le fichier index.html dans le dossier /urs/share/nginx/html du deployment pour afficher le contenu de votre choix. 
 
