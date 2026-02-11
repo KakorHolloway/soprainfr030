@@ -18,6 +18,12 @@ A la fin vous devrez rendre :
 
 Par groupe de 2 au maximum, choisissez une application consitituée d'un back et d'un front à déployer.
 
+En exemple vous pouvez aussi créer le Dockerfile pour l'une de ces applications (je n'attends pas à ce que vous génériez un dockerfile pour la bdd):
+- Bookstack
+- GLPI
+- Django Oscar
+
+
 - Créez l'image docker de vos composants applicatifs et mettez la à disposition sur harbor.kakor.ovh/ipi/nomgroupe-back (dans l'idéal elle ne devraient s'executer en root)
 
 https://harbor.kakor.ovh (utilisateur)
